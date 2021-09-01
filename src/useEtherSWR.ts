@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react'
-import useSWR, { cache, mutate } from 'swr'
+import useSWR, { useSWRConfig } from "swr";
 import { SWRResponse } from 'swr'
 import { isAddress } from '@ethersproject/address'
 import { EthSWRConfigInterface } from './types'
@@ -8,7 +8,9 @@ import { etherJsFetcher } from './ether-js-fetcher'
 import { ABINotFound } from './Errors'
 import { getContract, contracts } from './utils'
 
-export { cache } from 'swr'
+import { unstable_serialize } from 'swr'
+unstable_serialize(key)
+
 export type etherKeyFuncInterface = () => ethKeyInterface | ethKeysInterface
 export type ethKeyInterface = [string, any?, any?, any?, any?]
 export type ethKeysInterface = string[][]
