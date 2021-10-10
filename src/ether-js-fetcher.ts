@@ -1,4 +1,5 @@
-import { Contract, Wallet } from 'ethers'
+import { Wallet } from '@ethersproject/wallet'
+import { Contract } from '@ethersproject/contracts'
 import { isAddress } from '@ethersproject/address'
 import { ABIError, ABINotFound } from './Errors'
 import { JsonRpcSigner, Provider, Web3Provider } from '@ethersproject/providers'
