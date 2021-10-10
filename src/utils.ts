@@ -1,4 +1,4 @@
-import { Contract, ContractInterface } from 'ethers'
+import { Contract, ContractInterface } from '@ethersproject/contracts'
 
 export const contracts = new Map<string, Contract>()
 export function getContract(
