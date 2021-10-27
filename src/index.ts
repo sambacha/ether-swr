@@ -1,3 +1,9 @@
+/**
+ *  @package ether-swr
+ *  @version 1.1.0
+ *  @exports useEtherSWR
+*/
+
 export * from './ether-js-fetcher'
 export * from './types'
 export * from './useEtherSWR'

@@ -13,3 +13,5 @@ examples/**/yarn.lock
 package-lock.json
 yarn.lock
 yalc.lock
+.nyc*
+.coverage*

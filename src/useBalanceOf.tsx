@@ -24,7 +24,7 @@ export function useBalanceOf<T = BigNumber>(
 
     const keys = owners || contracts || []
 
-    const singleKey: [string, any, any] =
+    const singleKey: [string, string, string] | undefined =
       ownerOrOwners &&
       typeof ownerOrOwners === 'string' &&
       typeof contractOrContracts === 'string'
