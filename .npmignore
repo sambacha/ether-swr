@@ -5,3 +5,12 @@ node_modules
 .next
 .DS_Store
 coverage
+.github/
+test/
+examples/
+logo.png
+.nvmrc
+codecov.yml
+jest.config.js
+.eslint*
+.prettier*

@@ -1,7 +1,7 @@
 import useEtherSWR from './useEtherSWR'
 import { useWeb3React } from '@web3-react/core'
 import { Web3Provider } from './types'
-import { BigNumber } from 'ethers'
+import { BigNumber } from '@ethersproject/bignumber';
 import { useMemo, useState } from 'react'
 
 export function useBalanceOf<T = BigNumber>(
@@ -24,7 +24,7 @@ export function useBalanceOf<T = BigNumber>(
 
     const keys = owners || contracts || []
 
-    const singleKey: [string, any, any] =
+    const singleKey: [string, string, string] | undefined =
       ownerOrOwners &&
       typeof ownerOrOwners === 'string' &&
       typeof contractOrContracts === 'string'

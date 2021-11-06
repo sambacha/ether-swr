@@ -1,5 +1,6 @@
 import { Cache, SWRConfiguration } from 'swr'
-import { Wallet } from 'ethers'
+import { Wallet } from '@ethersproject/wallet'
+
 import { Listener, Provider } from '@ethersproject/abstract-provider'
 import { Signer } from '@ethersproject/abstract-signer'
 import { JsonRpcSigner } from '@ethersproject/providers'

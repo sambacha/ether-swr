@@ -1,0 +1,7 @@
+test/
+__snapshots__/
+*.spec.js
+*.html
+*.css
+*.scss
+*.svg

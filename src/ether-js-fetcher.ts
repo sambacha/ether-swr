@@ -1,4 +1,5 @@
-import { Contract, Wallet } from 'ethers'
+import { Wallet } from '@ethersproject/wallet'
+import { Contract } from '@ethersproject/contracts'
 import { isAddress } from '@ethersproject/address'
 import { ABIError, ABINotFound } from './Errors'
 import { JsonRpcSigner, Provider, Web3Provider } from '@ethersproject/providers'
@@ -10,7 +11,7 @@ export const etherJsFetcher = (
   signer: Wallet | JsonRpcSigner,
   ABIs?: Map<string, any>
 ) => (...args: any[]) => {
-  let parsed
+  let parsed: any[]
   try {
     parsed = JSON.parse(args[0])
   } catch (e) {
@@ -42,7 +43,7 @@ export const etherJsFetcher = (
       const address =
         signer instanceof Wallet ? signer.address : signer._address
       // FIXME address could be null if an index has been passed
-      return provider[method](address, param2, ...otherParams)
+      return provider[method](address!, param2, ...otherParams)
     }
 
     return provider[method](param2, ...otherParams)
